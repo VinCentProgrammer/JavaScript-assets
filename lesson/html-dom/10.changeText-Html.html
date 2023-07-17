@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay đổi text - html trên dom</title>
+</head>
+<body>
+    <h1 id="demo">HTML DOM - CHANGE TEXT HTML</h1>
+    <div id="result">
+        <!-- Thành tiền -->
+    </div>
+    <script>
+        const demo = document.getElementById('demo');
+        // console.log(demo.innerText);
+        // console.log(demo.innerHTML);
+
+        let total = 1988;
+        const result = document.getElementById('result');
+        // result.innerHTML =  '<b>Thành tiền: </b>' + total;
+        result.innerText =  'Thành tiền:' + total;
+    </script>
+</body>
+</html>

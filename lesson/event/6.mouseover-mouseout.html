@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện mouseover - mouseout</title>
+</head>
+<body>
+    <!-- <h1 onmouseover="console.log('Hover in');" onmouseout="console.log('Hover out');">Event mouseover - mouseout</h1> -->
+    <h1>Event mouseover - mouseout</h1>
+    <script>
+        const h1 = document.querySelector('h1');
+        h1.addEventListener('mouseover', function(){
+            console.log('Hover in');
+        })
+        h1.addEventListener('mouseout', function(){
+            console.log('Hover out');
+        })
+    </script>
+</body>
+</html>

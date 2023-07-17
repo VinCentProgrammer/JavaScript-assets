@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cách sử dụng đối tượng this trong js</title>
+</head>
+<body>
+    <!-- <h1 onclick="console.log(this.innerText);">Cách sử dụng đối tượng this</h1> -->
+    <!-- <h1 onclick="this.innerText = 'Clicked!'">Cách sử dụng đối tượng this</h1> -->
+    <h1>Cách sử dụng đối tượng this</h1>
+    <script>
+        function show()
+        {
+            console.log(this.innerText);
+        }
+
+        const h1 = document.querySelector('h1');
+        // h1.onclick = show;
+
+        h1.addEventListener('click', function(){
+            this.innerText = 'Clicked!';
+            this.parentNode.style.background = 'yellow';
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm 1 phần tử vào trước và sau 1 phần tử con xác định</title>
+</head>
+<body>
+    <h1>before() - after()</h1>
+    <ul id="langs">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li class="current">JS</li>
+        <li>PHP</li>
+    </ul>
+    <script>
+        const current = document.querySelector('.current');
+
+        const liNew = document.createElement('li');
+        liNew.textContent = 'REACTJS';
+
+        // current.before(liNew);
+        current.after(liNew);
+    </script>
+</body>
+</html>

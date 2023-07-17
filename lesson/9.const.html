@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khai báo hằng const</title>
+</head>
+<body>
+    <h1>Khai báo hằng const</h1>
+    <script>
+        // const MAX = 10; // không lỗi
+
+        // const MAX;
+        // MAX = 10; // Lỗi
+
+        // const MAX = 10;
+        // const MAX = 100// lỗi -> do khai báo lại
+
+        // const MAX = 100, AGE = 25; // không lỗi
+
+        {
+            const MAX = 100;
+            console.log(MAX); // 100
+        }
+        console.log(MAX); // chưa khai báo max
+    </script>
+</body>
+</html>

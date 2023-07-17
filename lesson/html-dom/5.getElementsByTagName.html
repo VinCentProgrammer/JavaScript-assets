@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lấy element thông qua tagName </title>
+</head>
+<body>
+    <h1>getElementsByTagName()</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam inventore laudantium perferendis numquam dicta dignissimos, porro dolores in ratione culpa.</p>
+    <h2>Heading 2.1</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, doloremque autem. Dolorem ab distinctio ducimus a repellendus exercitationem temporibus nisi?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, vel doloremque numquam voluptas necessitatibus obcaecati ab eaque. Blanditiis, deleniti maxime!</p>
+    <h2>Heading 2.2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, corrupti quisquam. Repellendus ipsum aliquam cum ducimus excepturi! Qui nesciunt dicta assumenda aliquid laudantium provident, corporis aspernatur rerum ratione adipisci quam sint vel tempora minus veritatis quod est fuga porro labore.</p>
+    <script>
+        const h2 = document.getElementsByTagName('h2');
+        // console.log(h2);
+        h2[0].style.color = 'green';
+        h2[1].style.color = 'tomato';
+    </script>
+</body>
+</html>

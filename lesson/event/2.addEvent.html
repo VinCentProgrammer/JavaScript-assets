@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 cách thêm sự kiện vào elememt html</title>
+</head>
+<body>
+    <h1>How add event to element html</h1>
+    <!-- Cách 1: Inline element -->
+    <!-- <button id="btn" onclick="alert('Clicked me!');">Click me!</button> -->
+    <!-- <button id="btn" onclick="show()">Click me!</button> -->
+
+    <button id="btn">Click me!</button>
+
+    <script>
+        function show()
+        {
+            alert('Clicked me!');
+        }
+
+        // Cách 2: Js
+        const btn = document.getElementById('btn');
+
+        // btn.onclick = function(){
+        //     alert('2. Clicked me!');
+        // };
+
+        // btn.onclick = show;
+
+        // Cách 3: AddEventListenner
+        // btn.addEventListener('click', function(){
+        //     alert('3. Clicked me!');
+        // })
+        // btn.addEventListener('click', show);
+
+        btn.addEventListener('click', function(){
+            alert('3. Clicked 1');
+        })
+        btn.addEventListener('click', function(){
+            alert('3. Clicked 2');
+        })
+
+        
+    </script>
+</body>
+</html>

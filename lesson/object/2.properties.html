@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Làm việc với thuộc tính trong js</title>
+</head>
+<body>
+    <h1>Làm việc với thuộc tính trong js</h1>
+    <script>
+        let person = {
+            firstName: "Hà Văn",
+            lastName: "Dũng",
+            age: 19,
+            gender: "Male"
+        }
+
+        /*
+        1. Truy cập vào thuộc tính thông qua object
+        2. Truy cập vào thuộc tính thông qua vòng lặp
+        3. Cập nhật giá trị của thuộc tính
+        4. Tạo thuộc tính mới
+        5. Xóa thuộc tính
+        */
+
+        //1. Truy cập vào thuộc tính thông qua object
+        // console.log(person.lastName);
+        // console.log(person["lastName"]);
+
+        //2. Truy cập vào thuộc tính thông qua vòng lặp
+        // for(let x in person)
+        // {
+        //     console.log(x + ': ' + person[x]);
+        // }
+        //3. Cập nhật giá trị của thuộc tính
+        // person.age = 20;
+        //4. Tạo thuộc tính mới
+        // person.weight = 50;
+        //5. Xóa thuộc tính
+        delete(person.age);
+
+        console.log(person);
+    </script>
+</body>
+</html>

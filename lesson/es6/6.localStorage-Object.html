@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lưu trữ dữ liệu với LocalStorage - Object</title>
+</head>
+<body>
+    <h1>LocalStorage - Object</h1>
+    <script>
+        // let user = {
+        //     fullname: 'Hà Văn Dũng',
+        //     age: 19,
+        //     gender: 'male'
+        // }
+
+        // localStorage.setItem('USER', JSON.stringify(user));
+
+        // let data = JSON.parse(localStorage.getItem('USER'));
+        // console.log(data);
+        // console.log(data.age);
+        // console.log(data.fullname);
+        // console.log(data.gender);
+        
+        const USERS = 'USERS';
+        let users = [
+            {
+                fullname: 'Hà Văn Dũng',
+                age: 19,
+                gender: 'male'
+            },
+            {
+                fullname: 'Hà Thanh Hùng',
+                age: 14,
+                gender: 'male'
+            }
+        ];
+        
+        localStorage.setItem(USERS, JSON.stringify(users));
+
+        let data = JSON.parse(localStorage.getItem(USERS));
+        console.log(data[0]);
+        console.log(data[1]);
+
+    </script>
+</body>
+</html>

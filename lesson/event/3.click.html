@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện click </title>
+</head>
+<body>
+    <h1>Event Click</h1>
+    <!-- <button id="btn" onclick="alert('Clicked!');">Click me!</button> -->
+    <!-- <button id="btn" ondblclick="alert('Clicked!');">Double Click Me!</button> -->
+    <button id="btn">Click Me!</button>
+    <script>
+        const btn = document.getElementById('btn');
+        // btn.addEventListener('click', function(){
+        //     alert('Clicked!');
+        // })
+        // btn.addEventListener('click', function(e){
+        //     console.log(e);
+        //     alert('Clicked!');
+        // })
+        btn.addEventListener('dblclick', function(e){
+            console.log(e);
+            alert('Double Clicked!');
+        })
+    </script>
+</body>
+</html>

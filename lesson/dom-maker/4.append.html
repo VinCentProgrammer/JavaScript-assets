@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm nhiều element vào phần tử cha</title>
+</head>
+<body>
+    <h1>append()</h1>
+    <ul id="menu">
+        <li>Trang chủ</li>
+        <li>Giới thiệu</li>
+    </ul>
+    <script>
+        // Thêm 2 submenu là Sản phẩm và Liên hệ
+        const menu = document.getElementById('menu');
+
+        const li1 = document.createElement('li');
+        li1.textContent = 'Sản phẩm';
+
+        const li2 = document.createElement('li');
+        li2.textContent = 'Liên hệ';
+
+        menu.append(li1, li2);
+    </script>
+</body>
+</html>

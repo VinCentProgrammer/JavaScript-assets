@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Làm việc với dataset trên element</title>
+</head>
+<body>
+    <h1>Làm việc với dataset trên element</h1>
+    <div id="user" data-id="111" data-username="dungken" data-date-of-birth="" data-age="19"></div>
+    <script>
+        const user = document.getElementById('user');
+        // console.log(user.id);
+        // console.log(user.dataset);
+        // console.log(user.dataset.id);
+        // console.log(user.dataset.username);
+        // console.log(user.dataset.age);
+
+        // user.dataset.dateOfBirth = '21/12/2004';
+
+        delete user.dataset.age;
+        
+        console.log(user.dataset);
+    </script>
+</body>
+</html>

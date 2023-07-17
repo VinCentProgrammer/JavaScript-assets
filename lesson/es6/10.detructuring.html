@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gán dữ liệu nâng cao trong JS</title>
+</head>
+<body>
+    <h1>Destructuring</h1>
+    <script>
+        //1. Nhận giá trị từ array, object
+        /*
+        let my_arr = [1, 2, 3, 4, 5];
+        let [a, b, c, d, e] = my_arr;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+        console.log(e);
+        */
+        /*
+        let my_object = {
+            fullname: 'Hà Văn Dũng',
+            email: 'dungken2112@gmail.com'
+        }
+        let {fullname, email} = my_object;
+        console.log(fullname);
+        console.log(email);
+        */
+
+        //2. Default value
+        /*
+        let my_arr = [1, 2, 3, 4, 5, 6];
+        let [a, b, c, d, e, k = 10] = my_arr;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+        console.log(e);
+        console.log(k);
+        */
+        
+        //3. ...rest parameter
+        /*
+        let my_arr = [1, 2, 3, 4, 5, 6];
+        let [a, b, ...moreNumber] = my_arr;
+        console.log(a);
+        console.log(b);
+        console.log(moreNumber);
+        */
+        
+        //4. Bỏ qua phần tử
+        /*
+        let my_arr = [1, 2, 3, 4, 5, 6];
+        let [a, b, , , , k] = my_arr;
+        console.log(a);
+        console.log(b);
+        console.log(k);
+        */
+        //5. Hoán đổi vị trí
+        /*
+        let my_arr = [1, 2];
+        let [a, b] = my_arr;
+        [b, a] = [a, b];
+        console.log(a);
+        console.log(b);
+        */
+        //6. Nhận giá trị trả về từ function
+        /*
+        let my_func = (a, b) => {
+            return [a, b];
+        }
+        let [m, n] = my_func(10, 20);
+        */
+        
+        let my_func = (a, b) => {
+            return {a, b};
+        }
+        let {a, b} = my_func(10, 20);
+        console.log(a);
+        console.log(b);
+    </script>
+</body>
+</html>

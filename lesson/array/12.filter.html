@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lọc mảng với phương thức filter</title>
+</head>
+<body>
+    <h1>Lọc mảng với phương thức filter</h1>
+    <script>
+        let list_numbers = [1, 2, 4, 5, 1, 3, 5,123, 12394];
+        let res = [];  
+        
+        function check_even(k)
+        {
+            return k % 2 == 0;
+        }
+
+        res = list_numbers.filter(check_even);
+        console.log(res);
+    </script>
+</body>
+</html>

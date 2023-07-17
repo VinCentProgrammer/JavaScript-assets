@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setter và Getter trong Class</title>
+</head>
+<body>
+    <h1>Setter và Getter trong Class</h1>
+    <script>
+        class Student{
+            constructor(fullname, uni, std_year){
+                this.fullname = fullname;
+                this.uni = uni;
+                this.std_year = std_year;
+            }
+            // setFullname(fullname){
+            //     this.fullname = fullname;
+            // }
+            // getFullname(){
+            //     return this.fullname;
+            // }
+            
+            set setFullname(fullname){
+                this.fullname = fullname;
+            }
+            get getFullname(){
+                return this.fullname;
+            }
+        }
+
+        let my_info = new Student('Hà Văn Dũng', 'UCT2', 2);
+        // console.log(my_info.getFullname());
+        // my_info.setFullname('Hà Dũng');
+        // console.log(my_info.getFullname());
+
+        console.log(my_info.getFullname);
+        my_info.setFullname = 'Hà Dũng';
+        console.log(my_info.getFullname);
+
+    </script>
+</body>
+</html>

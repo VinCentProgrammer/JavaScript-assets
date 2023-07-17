@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo element HTML</title>
+</head>
+<body>
+    <script>
+        const body = document.body;
+        // Tạo ra thẻ div có #wrapper .text-center có text content div
+        const divWrapper = document.createElement('div');
+        divWrapper.id = 'wrapper';
+        divWrapper.className = 'text-center';
+        divWrapper.innerText = 'Content div';
+
+        const p = document.createElement('p');
+        p.innerText = 'Content p';
+
+        const h1 = document.createElement('h1');
+        h1.innerText = 'Heading 1';
+
+        body.appendChild(divWrapper);
+        body.appendChild(p);
+        body.appendChild(h1);
+    </script>
+</body>
+</html>

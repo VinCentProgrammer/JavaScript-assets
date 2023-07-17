@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array map render html </title>
+</head>
+<body>
+    <style>
+        ul#list-product{
+            padding: 0;
+            list-style: none;
+            display: flex;
+            margin-left: 100px;
+        }
+
+        ul#list-product li.product-item{
+            max-width: 350px;
+            height: 100%;
+            border: 1px solid #b4a8a8;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+        ul#list-product li.product-item:hover{
+            border: 1px solid #cf8c8c;
+        }
+        ul#list-product li.product-item a{
+            display: block;
+        }
+        ul#list-product li.product-item a img{
+            max-width: 100%;
+            height: auto;
+        }
+        ul#list-product li.product-item .product_name{
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            display: block;
+            padding: 10px;
+            font-size: 20px;
+        }
+        .ram{
+            text-align: center;
+            margin: 0;
+            padding: 5px;
+        }
+
+        .price{
+            text-align: center;
+            margin: 0;
+            font-size: 20px;
+        }
+
+    </style>
+    <h1>Array map render html</h1>
+    <ul id="list-product">
+
+    </ul>
+    <script>
+        const listProduct = document.getElementById('list-product');
+
+        let productItem = [
+            {
+                id: 1,
+                url: '#',
+                product_thumb: 'https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-den-thumb-600x600.jpg',
+                product_name: 'Iphone 14 Pro Max',
+                ram: '128',
+                price: '26.690.000',
+            },
+            {
+                id: 2,
+                url: '#',
+                product_thumb: 'https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/285082/oppo-a57-den-thumb-600x600.jpeg',
+                product_name: 'Oppo A57',
+                ram: '128',
+                price: '4.390.000',
+            }
+        ];
+
+        let productsHtml = productItem.map((element) => {
+            return `
+            <li class="product-item">
+                <a href="${element.url}"><img src="${element.product_thumb}" alt=""></a>
+                <a class="product_name" href="${element.url}">${element.product_name}</a>
+                <p class="ram">RAM: ${element.ram}GB</p>
+                <p class="price">Giá: ${element.price}đ</p>
+            </li>
+            `
+        });
+
+        listProduct.innerHTML = productsHtml.join(" ");
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện submit</title>
+</head>
+<body>
+    <h1>Sự kiện submit</h1>
+    <form action="" style="width: 200px;" id="register">
+        <fieldset>
+            <legend>Regiter Form</legend>
+            <label for="username">Username:</label><br>
+            <input type="text" name="username" id="username"> <br>
+            <label for="password">Password:</label><br>
+            <input type="password" name="password" id="password"> <br>
+            <label for="city">City: </label><br>
+            <select name="city" id="city">
+                <option value="0">Chọn thành phố</option>
+                <option value="1">TP HCM</option>
+                <option value="2">HÀ NỘI</option>
+                <option value="3">ĐÀ NẴNG</option>
+            </select><br><br>
+            <input type="submit" value="Register Now">
+        </fieldset>
+    </form>
+    <script>
+        const username = document.getElementById('username');
+        const password = document.getElementById('password');
+        
+        const registerForm = document.forms;
+        registerForm[0].addEventListener('submit', function(e){
+            console.log(`${username.value} ${password.value}`);
+            e.preventDefault(); // Ngăn chặn load page mặc định
+        })
+        
+    </script>
+</body>
+</html>

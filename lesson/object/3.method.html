@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Làm việc với phương thức trong object</title>
+</head>
+<body>
+    <h1>Làm việc với phương thức trong object</h1>
+    <script>
+        /*
+        1. Định nghĩa 1 phương thức
+        2. Toán tử this
+        3. Thêm phương thức mới cho object
+        */ 
+        let obj = {
+            a: 10,
+            b: 20,
+            sum: function()
+            {
+                return this.a + this.b;  
+            }
+        }
+
+        //Thêm phương thức mới
+        obj.minus = function()
+        {
+            return this.a - this.b;
+        }
+        document.write(obj.sum() + '<br>');
+        document.write(obj.minus());
+    </script>
+</body>
+</html>

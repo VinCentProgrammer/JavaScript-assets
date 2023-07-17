@@ -1,0 +1,90 @@
+#todoList{
+    margin-top: 314px;
+    background-color: #1E272E;
+    padding: 23px 30px 30px 30px;
+    width: 542px;
+}
+
+form#head-task{
+    display: flex;
+    justify-content: space-between;
+    
+}
+form#head-task input{
+    background-color: #1E272E;
+    border: none;
+    outline: none;
+    color: #FF6F6F;
+    border-bottom: 1px solid #FF6F6F;
+    flex-basis: 80%;
+}
+form#head-task input::placeholder{
+    color: #FF6F6F;
+}
+
+form#head-task button{
+    background-color: #FF2B2B;
+    width: 86px;
+    height: 40px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+}
+
+ul.body-task{
+    padding: 0;
+    list-style: none;
+    margin-bottom: none;
+    color: #FFFFFF;
+    margin: 27px 0px 0px 0px;
+}
+ul.body-task li{
+    padding-bottom: 15px;
+}
+
+ul.body-task .task-item{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #525252;
+}
+ul.body-task .task-item[is_complete = true] span{
+    text-decoration: line-through;
+    color: #525252;
+}
+
+ul.body-task li:hover .task-item span{
+    color: #C7C7C7;
+    cursor: pointer;
+}
+ul.body-task .task-item span[is-complete = 'true']{
+    color: #676767;
+    text-decoration: line-through;
+}
+
+ul.body-task .task-action{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+ul.body-task li:hover .task-item .task-action i{
+    color: #C7C7C7;
+    cursor: pointer;
+}
+
+ul.body-task .task-action .action-update{
+    padding: 0px 5px;
+    color: #5C5C5C;
+}
+ul.body-task .task-action .action-delete{
+    padding: 0px 5px;
+    color: #5C5C5C;
+}
+
+.footer{
+    font-style: italic;
+    color: #828282;
+    font-size: 13px;
+}

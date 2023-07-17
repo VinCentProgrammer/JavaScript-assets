@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 6 - Hiển thị thông tin đăng kí</title>
+</head>
+<body>
+    <form action="" id="register" style="width: 200px; margin: 50px;">
+        <fieldset>
+            <legend>
+                Register Form
+            </legend>
+            <label for="fullname">Fullname: </label><br>
+                <input type="text" name="fullname" id="fullname"><br>
+                <label for="username">Username: </label><br>
+                <input type="text" name="username" id="username"><br>
+                <label for="password">Password: </label><br>
+                <input type="password" name="password" id="password"><br>
+                <label for="city">City: </label><br>
+                <select name="city" id="city">
+                    <option value=" ">Chọn thành phố</option>
+                    <option value="1">Hồ Chí Minh</option>
+                    <option value="2">Đà Nẵng</option>
+                    <option value="3">Hà Nội</option>
+                    <option value="4">Thành phố khác</option>
+                </select><br><br>
+                <input id="btn-register" type="submit" value="Register Now">
+        </fieldset>
+    </form>
+    <div id="result" style="margin-left: 60px;">
+        <!-- 
+            Fullname: 
+            Username:
+            Password:
+            City:
+        -->
+    </div>
+    <script>
+
+        const registerForm = document.forms.register;
+        const fullname = document.getElementById('fullname');
+        const username = document.getElementById('username');
+        const password = document.getElementById('password');
+        const city = document.getElementById('city');
+
+        const result = document.getElementById('result');
+
+        let list_city = ['Hồ Chí Minh', 'Đà Nẵng', 'Hà Nội', 'Thành Phố Khác'];
+
+        registerForm.addEventListener('submit', function(e){
+            result.innerHTML = `
+            Fullname: <b>${fullname.value} </b> <br>
+            Username: <b>${username.value} </b> <br>
+            Password: <b>${password.value} </b> <br>
+            City: <b>${list_city[city.value - 1]} </b>
+            `;
+            e.preventDefault();
+        })
+        
+    </script>
+</body>
+</html>

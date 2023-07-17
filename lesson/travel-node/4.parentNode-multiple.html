@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trỏ đến phần tử cha parentNode multiple</title>
+</head>
+<body>
+    <h1>Trỏ đến phần tử cha parentNode multiple</h1>
+    <a href="">Học lập trình web đi làm</a>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ipsam, in cum molestias facilis odio maiores nostrum labore ex tempore corrupti sit asperiores quaerat nulla tempora minus incidunt consequuntur, recusandae placeat. Mollitia blanditiis, officiis quia delectus laudantium impedit voluptatem similique!</p>
+    <ul id="main-menu">
+        <li><a href="">Menu 1</a>
+            <ul class="sub-menu">
+                <li>
+                    <a href="">Menu 1.1</a>
+                </li>
+                <li>
+                    <a href="">Menu 1.2</a>
+                </li>
+                <li>
+                    <a href="">Menu 1.3</a>
+                </li>
+            </ul>
+        </li>
+        <li><a href="">Menu 2</a></li>
+        <li><a href="">Menu 3</a></li>
+        <li><a href="">Menu 4</a></li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sunt iusto accusamus sint saepe reprehenderit, earum cum suscipit molestias est fugiat. Dolorum nam ipsa ut voluptatibus sint nostrum aperiam quae officiis excepturi, voluptate inventore ea dolor recusandae tempore architecto est!</p>
+    <script>
+
+        const aNodeSubMenu = document.querySelector('.sub-menu li a');
+        // console.log(aNodeSubMenu.parentElement); //li
+        // console.log(aNodeSubMenu.parentElement.parentElement); //ul.sub-menu
+        // console.log(aNodeSubMenu.parentElement.parentElement.parentElement); //li
+        // console.log(aNodeSubMenu.parentElement.parentElement.parentElement.parentElement); //ul#main-menu
+        
+        // aNodeSubMenu.parentElement.style.background = 'yellow';
+        // aNodeSubMenu.closest('.sub-menu').style.background = 'yellow';
+        // aNodeSubMenu.closest('.sub-menu').parentElement.style.background = 'yellow';
+        aNodeSubMenu.closest('#main-menu').style.background = 'yellow';
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duyệt mảng bằng forEach</title>
+</head>
+<body>
+    <h1>Duyệt mảng bằng forEach</h1>
+    <script>
+        let list_numbers = [1, 2, 5, -1, 0, 9, 1];
+        let res = 0;
+        // for(let x of list_numbers)
+        // {
+        //     res += x;
+        // }
+
+        list_numbers.forEach(function(currentValue, index){
+            res += currentValue;
+            document.write(index + ': ' + currentValue + '<br>');
+        })
+        document.write('Tổng : ' + res);
+    </script>
+</body>
+</html>

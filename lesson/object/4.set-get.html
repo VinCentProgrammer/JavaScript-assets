@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Làm việc với set và get trong js</title>
+</head>
+<body>
+    <h1>Set & Get</h1>
+    <script>
+        /*
+        1. Định nghĩa getter và setter
+        2. Làm việc với get
+        3. Làm việc với set
+        */ 
+        let person = {
+            firstName: "Hà",
+            lastName: "Dũng",
+            get fullname()
+            {
+                return this.firstName + ' ' + this.lastName;
+            },
+            set fullname(info)
+            {
+                info = info.split(" ");
+                this.firstName = info[0];
+                this.lastName = info[info.length - 1];
+            }
+        }
+        person.fullname = "Hà Thị Thanh Bích";
+        document.write(person.fullname);
+    </script>
+</body>
+</html>

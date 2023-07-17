@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng thuộc tính nodeName</title>
+</head>
+<body>
+    <h1>Sử dụng thuộc tính nodeName</h1>
+    <a href="">Học lập trình web đi làm</a>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ipsam, in cum molestias facilis odio maiores nostrum labore ex tempore corrupti sit asperiores quaerat nulla tempora minus incidunt consequuntur, recusandae placeat. Mollitia blanditiis, officiis quia delectus laudantium impedit voluptatem similique!</p>
+    <ul id="main-menu">
+        <li><a href="">Menu 1</a></li>
+        <li><a href="">Menu 2</a></li>
+        <li><a href="">Menu 3</a></li>
+        <li><a href="">Menu 4</a></li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sunt iusto accusamus sint saepe reprehenderit, earum cum suscipit molestias est fugiat. Dolorum nam ipsa ut voluptatibus sint nostrum aperiam quae officiis excepturi, voluptate inventore ea dolor recusandae tempore architecto est!</p>
+    <script>
+        const h1Node = document.querySelector('h1');
+        console.log(h1Node.nodeName);
+
+        const aNode = document.querySelector('a');
+        console.log(aNode.nodeName);
+
+        const main_menu = document.getElementById('main-menu');
+        console.log(main_menu.nodeName);
+        
+    </script>
+</body>
+</html>

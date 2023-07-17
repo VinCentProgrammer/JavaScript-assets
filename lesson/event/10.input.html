@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện input</title>
+</head>
+<body>
+    <h1>Sự kiện input</h1>
+    <form action="" style="width: 200px;">
+        <fieldset>
+            <legend>Regiter Form</legend>
+            <label for="username">Username:</label><br>
+            <input type="text" name="username" id="username"> <br>
+            <label for="password">Password:</label><br>
+            <input type="password" name="password" id="password"> <br>
+            <label for="city">City: </label><br>
+            <select name="city" id="city">
+                <option value="0">Chọn thành phố</option>
+                <option value="1">TP HCM</option>
+                <option value="2">HÀ NỘI</option>
+                <option value="3">ĐÀ NẴNG</option>
+            </select><br><br>
+            <button>Register</button>
+        </fieldset>
+    </form>
+    <script>
+        const username = document.getElementById('username');
+        username.addEventListener('input', function(){
+            console.log(username.value);
+        })
+        const password = document.getElementById('password');
+        password.addEventListener('input', function(){
+            console.log(password.value);
+        })
+        
+    </script>
+</body>
+</html>

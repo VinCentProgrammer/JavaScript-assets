@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lấy element thông qua object collection</title>
+</head>
+<body>
+    <h1>Lấy element thông qua object collection</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam inventore laudantium perferendis numquam dicta dignissimos, porro dolores in ratione culpa.</p>
+    <h2 class="hightlight">Heading 2.1</h2>
+    <ul>
+        <li>Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3</li>
+    </ul>
+    <p class="hightlight">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, doloremque autem. Dolorem ab distinctio ducimus a repellendus exercitationem temporibus nisi?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, vel doloremque numquam voluptas necessitatibus obcaecati ab eaque. Blanditiis, deleniti maxime!</p>
+    <h2>Heading 2.2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, corrupti quisquam. Repellendus ipsum aliquam cum ducimus excepturi! Qui nesciunt dicta assumenda aliquid laudantium provident, corporis aspernatur rerum ratione adipisci quam sint vel tempora minus veritatis quod est fuga porro labore.</p>
+    <form action="" id="login_form">
+        <input type="text" name="username" id="username" placeholder="username">
+    </form>
+    <form action="" id="register_form">
+        <input type="text" name="username" id="username" placeholder="username">
+    </form>
+    <script>
+        // console.log(document.head);
+        // console.log(document.body);
+        console.log(document.forms[0]);
+        console.log(document.forms[1]);
+        console.log(document.forms);
+        console.log(document.links);
+    </script>
+</body>
+</html>

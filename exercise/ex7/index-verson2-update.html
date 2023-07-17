@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 7 - Thay đổi ảnh</title>
+</head>
+<body>
+    <style>
+        ul#list-product{
+            padding-left: 0px;
+            list-style: none;
+            display: flex;
+        }
+        li.product-item{
+            max-width: 300px;
+            margin: 10px;
+        }
+        li.product-item a{
+            display: block;
+        }
+
+        li.product-item a img{
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <h1>Bài tập 7 - Thay đổi ảnh</h1>
+    <ul id="list-product">
+        <li class="product-item">
+            <a href="">
+                <img src="img/pic-1.jpeg" data-src-v1="img/pic-1.jpeg" data-src-v2="img/pic-2.jpeg" alt="">
+            </a>
+        </li>
+        <li class="product-item">
+            <a href="">
+                <img src="img/pic-3.jpeg" data-src-v1="img/pic-3.jpeg" data-src-v2="img/pic-4.jpeg" alt="">
+            </a>
+        </li>
+    </ul>
+
+    <script>
+
+        const productItems = document.querySelectorAll('.product-item');
+
+        for(let productItem of productItems)
+        {
+            productItem.addEventListener('mouseover', function(){
+                const srcV2 = this.querySelector('img').dataset.srcV2;
+                this.querySelector('img').setAttribute('src', srcV2);
+            })
+
+            productItem.addEventListener('mouseout', function(){
+                const srcV1 = this.querySelector('img').dataset.srcV1;
+                this.querySelector('img').setAttribute('src', srcV1);
+            })
+        }
+        
+    </script>
+</body>
+</html>

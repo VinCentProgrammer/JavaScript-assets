@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>removeAttribute()</title>
+</head>
+<body>
+    <h1>removeAttribute()</h1>
+    <a href="" title="Js Beginner" reviews = "998">Js Beginner</a>
+
+    <div id="res"></div>
+    <script>
+        const aElement = document.querySelector('a');
+
+        aElement.removeAttribute('reviews');
+        console.log(aElement.getAttribute('reviews'));
+
+    </script>
+</body>
+</html>

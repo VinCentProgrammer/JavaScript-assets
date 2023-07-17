@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cập nhật giá trị mảng bằng forEach</title>
+</head>
+<body>
+    <h1>Cập nhật giá trị mảng bằng forEach</h1>
+    <script>
+        let list_numbers = [1, 2, 5, -1, 0, 9, 1];
+
+        // list_numbers.forEach(function(currentValue, index, arr){
+        //     arr[index] = currentValue * 15;
+        // })
+
+        list_numbers.forEach(my_function);
+
+        function my_function(currentValue, index, arr){
+            arr[index] = currentValue * 15;
+        }
+
+        console.log(list_numbers);
+    </script>
+</body>
+</html>

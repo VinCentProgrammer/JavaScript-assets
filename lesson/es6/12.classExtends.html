@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo lớp kế thừa(Extends) và super Class </title>
+</head>
+<body>
+    <h1>Create Class Extends and Super Class</h1>
+    <div id="res"></div>
+    <script>
+        class Users{
+            constructor(fullname){
+                this.fullname = fullname;
+            }
+            show(){
+                return`Xin chào tôi là ${this.fullname}`;
+            }
+            render(){
+                document.getElementById('res').innerHTML = this.show();
+            }
+        }
+
+        class Student extends Users{
+            constructor(fullname, uni, std_year){
+                super(fullname);
+                this.uni = uni;
+                this.std_year = std_year;
+            }
+            introduce(){
+                return `${super.show()} hiện tại đang học tại trường ${this.uni} , sinh viên năm ${this.std_year}`;
+            }
+        }
+
+        let my_info = new Student('Hà Văn Dũng', 'Phân Hiệu Đại Học Giao Thông Vận Tải', 4);
+        console.log(my_info.introduce());
+    </script>
+</body>
+</html>
